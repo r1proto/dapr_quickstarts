@@ -54,7 +54,7 @@ app.post('/neworder', async (req, res) => {
     try {
         const response = await fetch(stateUrl, {
             method: "POST",
-            body: JSON.stringify(state),
+            body: JSON.stringify(`${stateUrl}/order`),
             headers: {
                 "Content-Type": "application/json"
             }
